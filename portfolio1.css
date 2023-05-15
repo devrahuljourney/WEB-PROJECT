@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    /* font-family: 'Josefin Sans', sans-serif; */
+    font-family: 'Poppins', sans-serif;
+    max-height: 100vh;
+    background-color: #EAEBED;
+}
+.nav-div{
+    padding: 1.7rem 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.rahul{
+    font-size: 1.3rem;
+    font-weight: 800;
+}
+.right{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    
+}
+nav a {
+    color: #113D6B;
+    font-size: 15px;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: .7px;
+    padding: 0.4rem 1rem;
+}
+#Home, a:hover{
+    background-color: #113D6B;
+    color: #fff;
+    border-radius: 1rem;
+    transition: all.3s ease-in-out;
+}
+.main{
+    display: grid;
+    grid-template-columns: 5% repeat(2, 1fr);
+    column-gap: 1.5rem;
+    justify-content: space-between;
+    justify-items: center;
+    align-items: center;
+    margin: 5rem auto;
+
+
+}
+.social{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    
+}
+.social a {
+    border: 2px solid blue;
+    border-radius: 100% ;
+    padding: .4rem;
+    margin: .4rem 1rem;
+}
+h3{
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+h1 {
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+span{
+    color: #113D6B;
+}
+p{
+    margin-top: 1rem;
+    font-size: .98rem;
+    color: rgb(148, 143, 137);
+}
+.main-left{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.main-left a{
+    width: 20%;
+}
+.btn{
+    text-decoration: none;
+    border: 1px solid #113D6B;
+    border-radius: 0.4rem;
+    margin-top: 2rem;
+    cursor: pointer;
+    padding: 0.2rem;
+    width: 60%;
+}
+.image{
+    background-image: url(https://task025.w3spaces.com/graph6.png);
+    background-repeat: no-repeat;
+    background-position:0 120px;
+}
