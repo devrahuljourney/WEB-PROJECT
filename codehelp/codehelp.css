@@ -1028,7 +1028,7 @@ h1{
     border-left: 1px solid #ffffff;
 }
        /* media Q */
-@media(max-width: 850px)
+@media screen and (max-width: 767px)
 { 
     .nav{
         padding-right: 10%;
@@ -1046,7 +1046,38 @@ h1{
         display: flex;
         justify-content: end;
     }
-    
+    .div-right{
+        width: 50%;
+        margin-top: 150px;
+        width: 500px;
+        height: 400px;
+        margin-right: 300px;
+    }
+    .right-img{
+        position: relative;
+    }
+    .rimg1{
+        width: 450px;
+        margin-left: 160px;
+    }
+    .rimg2{
+        position: absolute;
+        bottom: 80%;
+        left: 65%;
+        width: 120px;
+    }
+    .rimg3{
+        position: absolute;
+        bottom: 20%;
+        left: 50%;
+        width: 120px;
+    }
+    .rimg4{
+        position: absolute;
+        bottom: 25%;
+        left: 82%;
+        width: 120px;
+    }
     .menu{
         visibility: visible;
         margin-right: 40%;
@@ -1100,6 +1131,22 @@ h1{
         flex-direction: column;
         gap: 30px;
     }
+    .ccourse{
+        margin-top: 10%;
+    }
+    .ccourse-left , .ccourse-right{
+        width: 350px;
+    }
+    .std-card{
+        display: flex;
+        flex-direction: column;
+    }
+    .ccourse-card {
+      margin-top: 10%;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
     .outer-circle {
         width: 300px;
         height: 300px;
@@ -1123,5 +1170,18 @@ h1{
     .into-p{
         color: #4A4F5C;
         font-size: 1em;
+    }
+    .code-lower{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        column-gap: 80px;
+    }
+    .ft{
+        display: flex;
+        flex-direction: column;
+    }
+    .f2{
+        display: flex;
+        flex-direction: column;
     }
 }
