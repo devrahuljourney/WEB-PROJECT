@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Share Model</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" href="user-regular.svg" type="image/x-icon">
+</head>
+<body>
+    
+    <div class="wrapper " ">
+        <div class="circle1"></div>
+       <div class="circle2"></div>
+       <div class="card">
+        <div class="card-img">
+            <div><img src="IMG_20230805_080704.jpg"alt=""></div>
+        </div>
+        <div class="user-name">
+            <h2>Rahul kumar</h2>
+        </div>
+        <div class="designation">
+            <h3>MERN STACK DEVLOPER</h3>
+        </div>
+        <div class="button-group">
+            <button onclick="openModal()" id="open" class="btn-share btn-card">
+                <i class="fa-solid fa-share"></i>
+                <div>Connect With Me</div>
+            </button>
+            <button class="btn-follow btn-card">Follow me</button>
+        </div>
+       </div>
+    </div>
+
+    <!--  model component -->
+      <div class="modal" id="modalId">
+        <div class="modal-header">
+            <h1>Share my profile</h1>
+            <div onclick="closeModal()" id="close">
+                <i class="fa-solid fa-xmark close"></i>
+            </div>
+        </div>
+
+        <div class="modal-body">
+            <h3>Share this via</h3>
+            <div class="icon-container">
+                <a href="https://www.linkedin.com/in/rahul-kumar-verma-ba81b4252/" class="icon" id="linkedin">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
+                <a href="https://twitter.com/Rahulkumartwt" class="icon" id="twitter">
+                    <i class="fa-brands fa-twitter"></i>
+                </a>
+                <a href="https://www.instagram.com/rhull.x/" class="icon" id="instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="https://wa.me/919162988797?text=Hello%2C%20how%20are%20you%3F" class="icon" id="whatsapp">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </a>
+                
+                <a href="https://github.com/rahulkumarv269" class="icon" id="github">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+            </div>
+        </div>
+      </div>
+
+      <!-- overlay -->
+      <div id="overlay" ></div>
+      <script src="script.js"></script>
+      
+</body>
+</html>

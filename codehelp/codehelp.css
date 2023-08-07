@@ -1030,6 +1030,9 @@ h1{
        /* media Q */
 @media screen and (max-width: 767px)
 { 
+    .container{
+        overflow-x: hidden;
+    }
     .nav{
         padding-right: 10%;
     }
