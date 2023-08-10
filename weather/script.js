@@ -1,22 +1,31 @@
-async function showWeather() {
-    const API_key = "35583b76c99f48d0abcb2f288d7df0da";
-    let city = "faridabad";
+const userTab = document.querySelector([data-userWeather]);
+const searchTab = document.querySelector([searchWeather]);
+const userContainer = document.querySelector(".weather-container");
+const grantAccessContainer = document.querySelector(".grant-location-container");
+const searchForm = document.querySelector([data-serachForm]);
+const loadingScreen = document.querySelector(".loading-container");
+const userInfoContainer = document.querySelector(".user-info-container");
 
-    try {
-        const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_key}`;
-        const response = await fetch(url);
-        const data = await response.json();
-        
-        const temperature = data.main.temp; // Accessing the temperature from the 'main' object
-        
-        console.log('Temperature:', temperature);
-        
-        let newPara = document.createElement('p');
-        newPara.textContent = `Temperature: ${temperature-273.15} C`; // Display temperature in Kelvin
-        document.body.appendChild(newPara); // Append the new element to the DOM
-    } catch (error) {
-        console.error('Error fetching weather data:', error);
-    }
+
+let currentTab = userTab;
+const API_KEY = "35583b76c99f48d0abcb2f288d7df0da";
+currentTab.classList.add("current-tab");
+
+// switching tab
+userTab.addEventListener("click",() => {
+    //pass click tab input
+    switchTab(userTab)
+});
+searchTab.addEventListener("click", () => {
+    switchTab(searchTab);
+});
+
+function switchTab(clickedTab)
+{
+   if(clickedTab != currentTab)
+   {
+      currentTab.classList.remove("current-tab");
+      currentTab = clickedTab;
+      clickedTab.classList.add("current-tab");
+   }
 }
-
-showWeather();
