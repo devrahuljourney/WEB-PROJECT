@@ -102,12 +102,24 @@ function renderWeatherInfo(weatherInfo) {
 
     // Populate UI elements with weather data
     cityName.innerText = weatherInfo?.name;
-    countryicon.src = `https://flafcdn.com/144×100/${weatherInfo?.sys?.country.toLowerCase()}.png`;
+   countryicon.src = `https://flagcdn.com/144×100/${weatherInfo?.sys?.country.toLowerCase()}.png`;
     weatherIcon.src = `http://openweathermap.org/img/wn/${weatherInfo?.weather[0]?.icon}.png`;
-    temp.innerText = weatherInfo?.main?.temp;
-    windSpeed.innerText = weatherInfo?.wind?.speed;
-    Humidity.innerText = weatherInfo?.main?.humidity;
-    cloudiness.innerText = weatherInfo?.clouds?.all;
+    // Assuming weatherInfo is your weather information object
+const kelvinTemp = weatherInfo?.main?.temp; // Temperature in Kelvin
+
+// Convert Kelvin to Celsius
+const celsiusTemp = kelvinTemp - 273.15;
+
+// Get the temp element by its ID
+// const tempElement = document.getElementById("temp");
+
+// Update the temp text content with the Celsius temperature
+temp.textContent = `${celsiusTemp.toFixed(2)} °C`;
+
+    // temp.innerText = weatherInfo?.main?.temp;
+    windSpeed.innerText = `${weatherInfo?.wind?.speed} m/s`;
+    Humidity.innerText =  `${weatherInfo?.main?.humidity} %`;
+    cloudiness.innerText = `${weatherInfo?.clouds?.all} %`;
 }
 
 // Event listener for "Grant Access" button
