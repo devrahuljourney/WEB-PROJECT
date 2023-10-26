@@ -8,8 +8,8 @@ const loadingScreen = document.querySelector(".loading-container");
 const userInfoContainer = document.querySelector(".user-info-container");
 
 let oldTab = userTab;
-
-const API_KEY = "35583b76c99f48d0abcb2f288d7df0da";
+// Enter your API key Here
+const API_KEY = "";
 
 // Add the "current-tab" class to the userTab initially
 oldTab.classList.add("current-tab");
